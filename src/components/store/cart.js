@@ -28,7 +28,6 @@ const cartSlice = createSlice({
       }
     },
     removeItemFormCart(state, action) {
-      console.log(action);
       const id = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
       state.totalQuantity--;
@@ -42,6 +41,5 @@ const cartSlice = createSlice({
     },
   },
 });
-
 export const cartActions = cartSlice.actions;
 export default cartSlice.reducer;
